@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar - Diego Montesdeoca</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header>
+        <h1>Buscar e Ingreso</h1>
+        <p>Página con formularios que utilizan los métodos <code>GET</code> y <code>POST</code>.</p>
+    </header>
+
+    <nav>
+        <a href="../../index.html">Inicio</a>
+        <a href="../horario/horario.html">Horario</a>
+        <a href="../multimedia/multimedia.html">Multimedia</a>
+        <a href="../contacto/contacto.html">Contacto</a>
+        <a href="buscar.html">Buscar</a>
+    </nav>
+
+    <main>
+        <!-- Sección de Búsqueda -->
+        <section id="introduccion">
+            <h2>Formulario de búsqueda</h2>
+            <form action="buscar.html" method="get">
+                <label for="tema">Buscar término:</label>
+                <input type="text" id="tema" name="tema" placeholder="Ej. HTML, CSS, JavaScript" required>
+                <button type="submit">Buscar</button>
+                <button type="reset" style="background-color: #6c757d;">Limpiar</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Sección de Acceso -->
+        <section id="acceso">
+            <h2>Acceso de Usuario</h2>
+            <form action="#" method="post">
+                <div style="margin-bottom: 15px;">
+                    <label for="correo">Correo electrónico:</label><br>
+                    <input type="email" id="correo" name="correo" placeholder="usuario@ejemplo.com" required>
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <label for="password">Contraseña (8 caracteres):</label><br>
+                    <input type="password" id="password" name="password" placeholder="Tu contraseña" required minlength="8" maxlength="8" style="width: 12ch;">
+                </div>
+
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Sección de Horario Corregida -->
+        <section id="seleccion-horario">
+            <h2>Agendar Asignatura</h2>
+            <form action="#" method="post">
+                <p>Escoge tu fecha y horario:</p>
+                
+                <!-- Fecha -->
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                <br><br>
+
+                <!-- Asignatura -->
+                <label for="asignatura">Asignatura:</label>
+                <select name="asignatura" id="asignatura" required>
+                    <option value="">Seleccione una asignatura</option>
+                    <option value="programacion">Programación</option>
+                    <option value="basedatos">Base de Datos</option>
+                    <option value="redes">Redes</option>
+                    <option value="sistemas">Sistemas Operativos</option>
+                </select>
+                <br><br>
+
+                <label for="hora">Hora (8:00 - 17:00):</label>
+                <input type="time" id="hora" name="hora" min="08:00" max="17:00" step="1800" required>
+                
+                <br><br>
+                <button type="submit">Enviar Fecha y Materia</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Formulario GET y POST para el laboratorio de HTML.</p>
+    </footer>
+</body>
+</html>
