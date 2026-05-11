@@ -59,7 +59,6 @@
             <h2>Agendar Asignatura</h2>
             <form action="#" method="post">
                 <p>Escoge tu fecha y horario:</p>
-                
                 <!-- Fecha -->
                 <label for="fecha">Fecha:</label>
                 <input type="date" id="fecha" name="fecha" required>
@@ -78,9 +77,45 @@
 
                 <label for="hora">Hora (8:00 - 17:00):</label>
                 <input type="time" id="hora" name="hora" min="08:00" max="17:00" step="1800" required>
-                
-                <br><br>
                 <button type="submit">Enviar Fecha y Materia</button>
+                <br><br>
+
+                <fieldset style="border: 1px solid #ccc; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                    <legend style="color: #264653; font-weight: bold;">Intereses</legend>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                        <label><input type="checkbox" name="intereses" value="programacion"> Programación</label>
+                        <label><input type="checkbox" name="intereses" value="basedatos"> Base de Datos</label>
+                        <label><input type="checkbox" name="intereses" value="redes"> Redes</label>
+                        <label><input type="checkbox" name="intereses" value="sistemas"> Sistemas Operativos</label>
+                        <label><input type="checkbox" name="intereses" value="webdev"> Desarrollo Web</label>
+                        <label><input type="checkbox" name="intereses" value="movil"> Desarrollo Móvil</label>
+                        <label><input type="checkbox" name="intereses" value="cloud"> Cloud Computing</label>
+                        <label><input type="checkbox" name="intereses" value="seguridad"> Ciberseguridad</label>
+                        <label><input type="checkbox" name="intereses" value="ia"> IA/Machine Learning</label>
+                        <label><input type="checkbox" name="intereses" value="devops"> DevOps</label>
+                    </div>
+                </fieldset>
+
+                <fieldset style="border: 1px solid #ccc; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                    <legend style="color: #264653; font-weight: bold;">Frecuencia de actualizaciones</legend>
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <label><input type="radio" name="frecuencia" value="diaria"> Diariamente</label>
+                        <label><input type="radio" name="frecuencia" value="semanal"> Semanalmente</label>
+                        <label><input type="radio" name="frecuencia" value="mensual"> Mensualmente</label>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Enviar Intereses</button>
+            </form>
+        </section>
+        <section>
+            <form>
+                <br>
+                <label for="codigo">Código (3 letras y 2 números, ej. ABC12)</label>
+                <input type="text" id="codigo" name="codigo"
+                       pattern="[A-Za-z]{3}[0-9]{2}"
+                       title="Tres letras seguidas de dos números">
+                <button type="submit">Enviar</button>
             </form>
         </section>
     </main>
